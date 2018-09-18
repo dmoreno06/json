@@ -35,6 +35,4 @@ export class AppComponent {
       error => (console.log('Ups! we have an error: ', error))
       );
   }
- */
-  }
 }
