@@ -20,14 +20,21 @@
       <ul id="nav">
           <h2>Parametros de busqueda de <em>solr</em></h2>
       </ul>
+
+     <!--  <form action="http://10.5.0.120:8983/solr/core2/select?indent=on&q=&wt=json">
+        <div>
+          <input type="search" id="site-search" name="q" #search>
+        </div>
+         <button (click)="ngOnInit(search.value)">{{btnResult}}</button>
+      </form> -->
+
       <form >
-          <div>
-            <input type="search" placeholder="{{parametro}}" value="{{parametro}}" #search>
-          </div>
-           <button (click)="generateData(search.value)">{{btnResult}}</button>
-            <!--<button (click)="generateData(search.value)">{{btnResult}}</button>-->
-          <!--<button (click)="ngOnInit(search.value)">{{btnResult}}</button>-->
-        </form>
+        <div>
+          <input type="search"  #search>
+        </div>
+          <button (click)="generateData(search.value)">{{btnResult}}</button>
+        <!--<button (click)="ngOnInit(search.value)">{{btnResult}}</button>-->
+      </form>
 
     <div id="cajas">
       <div id="response">
@@ -37,7 +44,7 @@
               <p>QTime = {{result.response?.start | number }}</p>
               <p>QTime = {{result.response?.docs[0].id }}</p>
         </div>
-        <a style='cursor: pointer;' onClick="muestra_oculta('responseHeade')" title="" class="boton_mostrar">Mostrar / Ocultar</a>
+        <a style='cursor: pointer;' onClick="muestra_oculta('respons')" title="" class="boton_mostrar">Mostrar / Ocultar</a>
         <!--<div><a href='#' id="mas1" onclick="mostrar('responseHeade')" >Leer más...</a></div>-->
       </div>
       <div id="responseHeader">
@@ -54,7 +61,7 @@
                   </ol>
               </li>
         </div>
-        <a style='cursor: pointer;' onClick="muestra_oculta('respons')" title="" class="boton_mostrar">Mostrar / Ocultar</a>
+        <a style='cursor: pointer;' onClick="muestra_oculta('responseHeade')" title="" class="boton_mostrar">Mostrar / Ocultar</a>
         <!-- <div id="mas2"><a href='#'  onclick="mostrarde('respons')">Leer más...</a></div> -->
       </div>
     </div>
@@ -229,7 +236,7 @@
         </fieldset>
       </form>
     </div>
-         <hr/>
-        <pre>{{result|json}}</pre>
+        <!-- <hr/>
+        <pre>{{result|json}}</pre> -->
 </body>
 </html>
